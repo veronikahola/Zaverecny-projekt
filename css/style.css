@@ -1,0 +1,63 @@
+.wrapper,
+.menu {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Raleway", sans-serif;
+  line-height: 1.8;
+}
+
+.section {
+  margin-top: 60px;
+}
+
+.logo {
+  font-family: "Sacramento", cursive;
+  font-size: 60px;
+  margin: 0;
+}
+
+.header {
+  height: 30vh;
+  margin: 0;
+  background-color: rgba(103, 91, 93, 0.221);
+  background-image: url(images/ovce-header.jpg);
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 40px;
+}
+.menu__item {
+  text-transform: uppercase;
+}
+.menu a {
+  text-decoration: none;
+  color: #393E41;
+  padding: 20px;
+  transition: 0.3s;
+}
+.menu a:hover, .menu a:active {
+  color: #A17D89;
+  transform: scale(1.2);
+}
+
+.intro {
+  display: flex;
+  gap: 40px;
+}
+.intro__image {
+  width: 100%;
+}
+.intro__flex {
+  flex-basis: 50%;
+}
+.intro--reverse {
+  flex-direction: row-reverse;
+  margin-top: 40px;
+}/*# sourceMappingURL=style.css.map */

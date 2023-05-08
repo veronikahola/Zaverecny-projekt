@@ -1,0 +1,20 @@
+@use "variables";
+
+
+
+.wrapper,
+.menu {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+body {
+    font-size: 18px;
+    font-family: variables.$font-main;
+    line-height: 1.8;
+}
+
+
+.section {
+    margin-top: variables.$spacer-section;
+}

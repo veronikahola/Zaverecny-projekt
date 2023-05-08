@@ -1,0 +1,7 @@
+@use "variables";
+
+.logo {
+    font-family: variables.$font-logo;
+    font-size: 60px;
+    margin: 0;
+}
