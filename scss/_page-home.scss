@@ -3,6 +3,7 @@
 .intro {
     display: flex;
     gap: variables.$spacer;
+    text-align: justify;
 
 
     &__image {
@@ -15,8 +16,15 @@
 
     &--reverse {
         flex-direction: row-reverse;
-        margin-top: variables.$spacer;
+        margin-top: variables.$spacer-section;
     }
 
 }
 
+.intro__image--frame-left {
+    box-shadow: -45px -45px 0 -40px variables.$color-second;
+}
+
+.intro__image--frame-right {
+    box-shadow: 45px 45px 0 -40px variables.$color-second;
+}

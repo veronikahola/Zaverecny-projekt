@@ -3,7 +3,8 @@
 
 
 .wrapper,
-.menu {
+.menu,
+.footer__grid {
     margin: 0 auto;
     max-width: 1000px;
 }
@@ -12,9 +13,17 @@ body {
     font-size: 18px;
     font-family: variables.$font-main;
     line-height: 1.8;
+    font-weight: 300;
+    margin: 0;
+    color: variables.$color-dark;
 }
 
 
 .section {
     margin-top: variables.$spacer-section;
+}
+
+
+h1, h2, h3 {
+    margin: 0 0 variables.$spacer-half 0;
 }

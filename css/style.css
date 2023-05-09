@@ -1,5 +1,6 @@
 .wrapper,
-.menu {
+.menu,
+.footer__grid {
   margin: 0 auto;
   max-width: 1000px;
 }
@@ -8,16 +9,40 @@ body {
   font-size: 18px;
   font-family: "Raleway", sans-serif;
   line-height: 1.8;
+  font-weight: 300;
+  margin: 0;
+  color: #393E41;
 }
 
 .section {
   margin-top: 60px;
 }
 
+h1, h2, h3 {
+  margin: 0 0 20px 0;
+}
+
 .logo {
   font-family: "Sacramento", cursive;
   font-size: 60px;
   margin: 0;
+}
+
+.button {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.5em 2em;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  display: inline-block;
+  border: 1px solid #F39237;
+  color: #F39237;
+  transition: 0.2s;
+}
+.button:hover {
+  background-color: #F39237;
+  color: white;
 }
 
 .header {
@@ -31,25 +56,28 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 40px;
+  padding-top: 20px;
 }
 .menu__item {
   text-transform: uppercase;
-}
-.menu a {
   text-decoration: none;
   color: #393E41;
   padding: 20px;
   transition: 0.3s;
 }
-.menu a:hover, .menu a:active {
+.menu__item:hover {
   color: #A17D89;
   transform: scale(1.2);
+}
+
+.menu-flex {
+  display: flex;
 }
 
 .intro {
   display: flex;
   gap: 40px;
+  text-align: justify;
 }
 .intro__image {
   width: 100%;
@@ -59,5 +87,58 @@ body {
 }
 .intro--reverse {
   flex-direction: row-reverse;
-  margin-top: 40px;
+  margin-top: 60px;
+}
+
+.intro__image--frame-left {
+  box-shadow: -45px -45px 0 -40px #F39237;
+}
+
+.intro__image--frame-right {
+  box-shadow: 45px 45px 0 -40px #F39237;
+}
+
+.google-map {
+  padding-bottom: 50%;
+  position: relative;
+}
+.google-map iframe {
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+.footer {
+  background-color: #A17D89;
+  color: white;
+  margin-top: 60px;
+  padding: 40px 0;
+  font-size: 14px;
+}
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 3fr;
+  grid-auto-flow: dense;
+  gap: 40px;
+}
+.footer__logo {
+  line-height: 0.8;
+  margin-top: 60px;
+}
+.footer__text--strong {
+  font-weight: 500;
+}
+.footer__text--a {
+  text-decoration: none;
+  color: #E0E0E0;
+}
+.footer__text--a:hover {
+  color: #F39237;
+}
+.footer__text--author {
+  margin: 0;
+  font-size: 12px;
+  color: #E0E0E0;
 }/*# sourceMappingURL=style.css.map */

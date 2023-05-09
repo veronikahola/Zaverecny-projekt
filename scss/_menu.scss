@@ -16,23 +16,24 @@
     align-items: center;
     justify-content: space-between;
 
-    padding-top: variables.$spacer;
+    padding-top: variables.$spacer-half;
 
 
     &__item {
         text-transform: uppercase;
-    }
-
-    & a {
         text-decoration: none;
         color: variables.$color-dark;
         padding: variables.$spacer-half;
         transition: 0.3s;
+        
 
-        &:hover,
-        &:active {
+        &:hover {
             color: variables.$color-first;
             transform: scale(1.2);
         }
     }
+}
+
+.menu-flex {
+    display: flex;
 }
