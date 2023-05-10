@@ -3,18 +3,7 @@
 
 
 
-.google-map {
-    padding-bottom: 50%;
-    position: relative;
 
-    & iframe {
-        height: 100%;
-        width: 100%;
-        left: 0;
-        top: 0;
-        position: absolute;
-    }
-}
 
 
 .footer {
@@ -40,12 +29,13 @@
         font-weight: 500;
     }
 
+
     &__text--a {
         text-decoration: none;
-        color: variables.$color-light;
+        color: variables.$color-second;
 
         &:hover {
-            color: variables.$color-second;
+            color: variables.$color-light;
         }
     }
 

@@ -1,0 +1,18 @@
+@use "variables";
+
+
+.section-kontakt__a {
+    color: variables.$color-first;
+    text-decoration: none;
+}
+
+.section-kontakt .section-kontakt__text {
+    margin-bottom: variables.$spacer;
+    margin-top: 0;
+}
+
+
+.section-column .heading-h3 {
+    margin-bottom: variables.$spacer-half;
+}
+

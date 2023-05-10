@@ -1,0 +1,83 @@
+---
+layout: layouts/main-template.njk
+title: Kontakt
+---
+
+<div class="wrapper">
+
+    <section class="section section-kontakt">
+    <h1 class="heading-h1">Navštivte nás</h1>
+
+
+    <div class="google-map google-map--big">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2390.711654816616!2d16.529119147622062!3d49.18231635016303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sfarma!5e1!3m2!1sen!2scz!4v1683569155690!5m2!1sen!2scz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+
+        <section class="section section__column-flex">
+
+
+            <div class="section__column--basis">
+                <h3 class="heading-h3">Otevírací doba</h3>
+                <p class="section-kontakt__text">
+                    Duben–srpen: 11:00 – 20:00<br>
+                    Září–březen: 13:00 – 18:00
+                </p>
+                
+                <h3 class="heading-h3">Kontakt</h3>
+                <p class="section-kontakt__text">
+                    <a class="section-kontakt__a" href="mailto:info@kohoutky.cz">info@kohoutky.cz</a><br>
+                    +420 773 175 156<br>
+                </p>
+
+                
+                <span class="callout">Farma Kohoutky</span>
+                <p class="section-kontakt__text">
+                    Ulička 15<br>
+                    Kohoutovice<br>
+                    Brno
+                </p>
+
+            </div>
+
+            
+
+            <!-- formulář -->
+            <section class="section__column section__column--form">
+                <h3 class="heading-h3">Máte otázky?</h3>
+                <form class="form" action="http://formular.itgirls.cz" method="post">
+
+
+                    <div class="form__field">
+                        <input class="form__input" type="text" name="jmeno" id="jmeno" required placeholder=" ">
+                        <label class="form__label" for="jmeno">Jméno a Příjmení *</label>
+                    </div>
+
+                    <div class="form__field">
+                        <input class="form__input" type="email" name="email" id="email" required placeholder=" ">
+                        <label class="form__label" for="email">E-mail *</label>
+                    </div>
+
+                    <div class="form__field">
+                        <input class="form__input" type="text" name="predmet" id="predmet" placeholder=" ">
+                        <label class="form__label" for="jmeno">Předmět</label>
+                    </div>
+
+                    <div class="form__field">
+                        <textarea class="form__input" name="zprava" id="zprava" cols="30" rows="10" placeholder=" "></textarea>
+                        <label class="form__label form__label--textarea" for="zprava">Zpráva</label>
+                    </div>
+
+                    <button class="button button--form">Odeslat</button>
+
+                </form>
+            </section>
+
+        </section>
+
+    </section> 
+
+</div>
+
+
+

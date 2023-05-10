@@ -6,7 +6,7 @@
     margin: 0;
 }
 
-
+// tlačítka
 .button {
     text-transform: uppercase;
     text-decoration: none;
@@ -28,5 +28,98 @@
         color: white;
     }
     
-    
+    &--margin {
+        margin-top: variables.$spacer-half;
+    }
+
+    &--form {
+        background-color: white;
+    }
+}
+
+
+
+// formulář
+.form {
+	width: 100%;
+
+    &__field {
+      margin-bottom: variables.$spacer-half;
+      font-size: variables.$font-size-normal;
+      position: relative;
+
+      display: flex;
+      flex-direction: column-reverse;
+
+      &:hover .form__label,
+      &:focus .form__label {
+        transform: translateY(-10px);
+      }
+
+      &:hover .form__input {
+        border-color: variables.$color-first;
+      }
+
+      & > .form__input:focus + .form__label {
+        transform: translateY(-10px);
+      }
+
+      & > .form__input:focus {
+        border-color: variables.$color-first;
+        outline-style: none;
+      }
+
+      & > .form__input:not(:placeholder-shown) + .form__label {
+        transform: translateY(-10px);
+        }
+    }
+
+    &__label {
+      display: block;
+      width: 100%;
+
+      position: absolute;
+      top: 50%;
+      right: auto;
+      bottom: auto;
+      left: 0;
+
+      padding-left: variables.$spacer-half;
+      margin-top: -10px;
+      text-transform: uppercase;
+      color: variables.$color-first;
+      font-size: variables.$font-size-small;
+      transition: .2s;
+
+      &--textarea {
+        top: 13%;
+      }
+    }
+
+    &__input {
+      width: 100%;
+      border: 1px solid variables.$color-second;
+      padding: 30px 0 10px variables.$spacer-half;
+      font-size: variables.$font-size-small;  
+    }
+}
+
+
+
+// mapa
+.google-map {
+  padding-bottom: 50%;
+  position: relative;
+
+  & iframe {
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      position: absolute;
+  }
+
+  &--big {
+    padding-bottom: 25%;
+  }
 }

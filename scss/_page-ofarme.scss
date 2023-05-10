@@ -1,0 +1,65 @@
+@use "variables";
+
+
+// .produkty {
+//     background-color: variables.$color-light;
+//     padding: variables.$spacer-section 0;
+// }
+
+.section-ofarme__image {
+    width: 100%;
+}
+
+
+
+// kartičky zvířat
+.animals__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: variables.$spacer-section variables.$spacer;
+}
+
+
+.animals-card {
+    text-align: center;
+    position: relative;
+
+    &__image {
+        width: 100%;
+        border-radius: 50%;
+    }
+
+    &__name {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin: variables.$spacer-half 0 0 0;
+    }
+}
+
+
+// fancy rámečky kartiček zvířat
+.border::after {
+    content: "";
+    border: 1px solid variables.$color-second;
+    width: 100%;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    padding-bottom: 100%;
+}
+
+.border--a::after {
+    top: 3%;
+    left: -3%;
+}
+
+.border--b::after {
+    top: -3%;
+    left: 3%;
+}
+
+.border--c::after {
+    top: 3%;
+    left: 3%;
+}
