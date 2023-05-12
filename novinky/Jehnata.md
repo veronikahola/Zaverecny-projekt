@@ -1,7 +1,7 @@
 ---
 layout: layouts/article.njk
-title: Narodila se nám jehňátka
-date: 2022-05-15T16:30
+title: Narodila se jehňátka
+date: 2023-05-15T16:30
 perex: Na naší farmě se nedávno narodilo 6 jehňat. Přijďte si je pomazlit.
 foto: article-jehnata.jpg
 alt: Jehňata

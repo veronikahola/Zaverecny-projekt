@@ -1,7 +1,7 @@
 ---
 layout: layouts/article.njk
 title: Udržitelné projkty
-date: 2022-07-20T16:30
+date: 2023-07-20T16:30
 perex: Na naší farmě se neustále snažíme zlepšovat naše postupy a vytvářet nové projekty, které zvýší naši udržitelnost a sníží naši stopu uhlíku.
 foto: article-projekty.jpg
 alt: Projekty
