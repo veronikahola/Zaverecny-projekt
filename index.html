@@ -5,38 +5,99 @@ title: Úvodní strana
 
 
 <div class="wrapper">
-<!-- intro sekce -->
-<section class="section section-intro">
+    <!-- intro sekce -->
+    <section class="section section-intro">
 
-    <div class="section__column-flex">
-        <div class="section__column">
-            <img class="section-intro__image section-intro__image--frame-left" src="images/intro1.jpg">
+        <div class="section__column-flex">
+            <div class="section__column">
+                <img class="section-intro__image frame-left" src="images/intro1.jpg">
+            </div>
+
+            <div class="section__column">
+                <h2 class="heading-h2">Kdo jsme?</h2>
+                <p class="intro__text">Vítejte na stránkách farmy Kohoutky! Jsme malá rodinná farma, která se nachází v krásné přírodě na venkově u Brna, kde jsme se postavili za udržitelný způsob hospodaření. Chceme tímto způsobem přispět k ochraně přírody a zajištění zdravého prostředí pro naše zvířata i pro lidi, kteří si naše produkty pochutnávají. Na našich stránkách se můžete seznámit s historií a vývojem naší farmy a dozvědět se více o tom, jak se staráme o naše zvířata a produkujeme kvalitní a zdravé potraviny pro naše zákazníky.</p>
+                <a class="button" href="/ofarme/index.html">Více</a>
+            </div>
         </div>
 
-        <div class="section__column">
-            <h2 class="heading-h2">Kdo jsme?</h2>
-            <p class="intro__text">Vítejte na stránkách farmy Kohoutky! Jsme malá rodinná farma, která se nachází v krásné přírodě na venkově u Brna, kde jsme se postavili za udržitelný způsob hospodaření. Chceme tímto způsobem přispět k ochraně přírody a zajištění zdravého prostředí pro naše zvířata i pro lidi, kteří si naše produkty pochutnávají. Na našich stránkách se můžete seznámit s historií a vývojem naší farmy a dozvědět se více o tom, jak se staráme o naše zvířata a produkujeme kvalitní a zdravé potraviny pro naše zákazníky.</p>
-            <a class="button" href="#">Více</a>
+
+
+        <div class="section__column-flex section__column-flex--reverse">
+            <div class="section__column">
+                <img class="section-intro__image frame-right" src="images/intro2.jpg">
+            </div>
+
+            <div class="section__column">
+                <h2 class="heading-h2">Produkty z naší farmy</h2>
+                <p class="intro__text">Na naší farmě se věnujeme chovu krav, ovcí, koz a slepic, které poskytují kvalitní mléko a vejce. Díky tomuto chovu dokážeme nabídnout několik druhů mléčných výrobků, jako jsou jogurty, sýry a tvaroh, a také chutné vejce od našich slepic. Pokud máte zájem o naše produkty, můžete je snadno a pohodlně objednat přes náš formulář na stránkách. Rádi vám je doručíme ať už osobně, nebo prostřednictvím kurýra.</p>
+                <a class="button" href="#">Více</a>
+            </div>
         </div>
-    </div>
+
+
+    </section>
 
 
 
-    <div class="section__column-flex section__column-flex--reverse">
-        <div class="section__column">
-            <img class="section-intro__image section-intro__image--frame-right" src="images/intro2.jpg">
+
+
+
+
+    <section class="section">
+        <h1 class="heading-h1">Co je u nás nového?</h1>
+        <div class="glide">
+            <div class="glide__track" data-glide-el="track">
+
+                <ul class="glide__slides">
+
+                    {% for prispevek in collections.article | reverse %}
+                    
+                  
+                    <li class="glide__slide">
+                        <a class="glide__card" href="{{ prispevek.url }}">
+                            <img class="article__image" src="/images/{{ prispevek.data.foto }}" alt="{{ alt }}">
+                            <h2 class="heading-h2 heading-h2--glide">{{ prispevek.data.title }}</h2>
+                            <p class="article__meta article__meta--glide"> {{ page.date.toLocaleString('cs-CZ') }}</p>
+                            <p class="article__perex--glide"> {{ prispevek.data.perex }}</p>
+                        </a>
+                    </li>
+
+
+                    {% endfor %}
+
+
+                </ul>
+            </div>
+
+
+
+
+
+
+
+
+            <div class="glide__arrows" data-glide-el="controls">
+                <button class="glide__arrow glide__arrow--left" data-glide-dir="<">←</button>
+                <button class="glide__arrow glide__arrow--right" data-glide-dir=">">→</button>
+            </div>
+
+
         </div>
-
-        <div class="section__column">
-            <h2 class="heading-h2">Produkty z naší farmy</h2>
-            <p class="intro__text">Na naší farmě se věnujeme chovu krav, ovcí, koz a slepic, které poskytují kvalitní mléko a vejce. Díky tomuto chovu dokážeme nabídnout několik druhů mléčných výrobků, jako jsou jogurty, sýry a tvaroh, a také chutné vejce od našich slepic. Pokud máte zájem o naše produkty, můžete je snadno a pohodlně objednat přes náš formulář na stránkách. Rádi vám je doručíme ať už osobně, nebo prostřednictvím kurýra.</p>
-            <a class="button" href="#">Více</a>
-        </div>
-    </div>
+    </section>
 
 
-</section>
+<script src="glide.min.js"></script>
+
+<script>
+  new Glide('.glide', {
+	type: 'slide',
+    autoplay: false,
+	perView: 3,
+    gap: 20,
+    hoverpause: true,
+    keyboard: true
+    
+  }).mount()
+</script>
 
 </div>
-
-

@@ -4,7 +4,10 @@
     font-family: variables.$font-logo;
     font-size: 60px;
     margin: 0;
+    color: variables.$color-dark;
+    text-decoration: none;
 }
+
 
 // tlačítka
 .button {
@@ -20,7 +23,7 @@
 
     border: 1px solid variables.$color-second;
     color: variables.$color-second;
-    transition: 0.2s;
+    transition:opacity 150ms ease, border 300ms ease-in-out;
     
     
     &:hover{
@@ -121,5 +124,50 @@
 
   &--big {
     padding-bottom: 25%;
+    margin-top: variables.$spacer;
+  }
+}
+
+
+
+// glide
+.glide__slide {
+  text-align: center;
+}
+
+
+.glide__card {
+  text-decoration: none;
+  color: variables.$color-dark;
+  display: block;
+  padding: variables.$spacer-half;
+  height: 60vh;
+  overflow: scroll;
+
+  &:hover {
+    transition: 0.3s;
+    background-color: variables.$color-second;
+  }
+
+  &:hover .article__image {
+    box-shadow: 43px 43px 0 -40px variables.$color-light;
+    transform: scale(1.05);
+  }
+
+}
+
+
+
+// glide šipky
+.glide__arrow {
+  color: variables.$color-second;
+  padding:10px;
+  border:1px solid variables.$color-second;
+  font-weight: 500;
+
+
+  &:hover {
+    background-color: variables.$color-second;
+    color: white;
   }
 }

@@ -1,0 +1,31 @@
+---
+layout: layouts/main-template.njk
+title: Novinky
+---
+
+<div class="wrapper">
+
+    <section class="section section-novinky">
+        <h1 class="heading-h1">Novinky</h1>
+
+        
+            {% for prispevek in collections.article | reverse %}
+
+                <div class="article-grid">
+                    <div class="article-grid__image"><img class="article__image frame-left" src="/images/{{ prispevek.data.foto }}" alt="{{ alt }}"></div>
+
+
+                    <div class="article-grid__text">
+                        <h2 class="heading-h2">{{ prispevek.data.title }}</h2>
+                        <p class="article__meta"> {{ page.date.toLocaleString('cs-CZ') }}</p>
+                        <p> {{ prispevek.data.perex }}</p>
+                        <a class="button" href="{{ prispevek.url }}">celý článek</a>
+                    </div>
+                </div>
+
+            {% endfor %}
+        
+
+    </section>
+
+</div>

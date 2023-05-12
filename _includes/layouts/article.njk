@@ -1,0 +1,32 @@
+---
+layout: layouts/main-template.njk
+---
+
+<div class="wrapper">
+
+    <article class="article section">
+
+        <h2 class="article__title heading-h2">{{ title }}</h2>
+        <p class="article__meta"> {{ page.date.toLocaleString('cs-CZ') }}
+        </p>
+
+
+        <div class="article__content">
+    
+            <div class="article__column">
+                <img class="article__image frame-right" src="/images/{{ foto }}" alt="{{ alt }}">
+            </div>
+
+            <div class="article__text">
+    
+                <p class="article__perex callout">{{ perex }}</p>
+    
+                {{ content | safe }}
+    
+            </div>
+        </div>
+    </article>
+
+    <a class="button" href="/novinky/index.html">← Zpět</a>
+
+</div>

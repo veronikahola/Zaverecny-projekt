@@ -1,0 +1,63 @@
+@use "variables";
+
+.article__image {
+    width: 100%;
+}
+
+.article__content {
+    display: flex;
+    gap: variables.$spacer;
+    margin: variables.$spacer 0;
+}
+
+.article__perex {
+    margin: 0 0 variables.$spacer 0;
+
+    &--glide {
+        text-align: justify;
+    }
+}
+
+.article__text {
+    margin: 0 0 variables.$spacer-half 0;
+    text-align: justify;
+}
+
+.article__title {
+    margin-bottom: 0;
+}
+
+.article__meta {
+    margin-top: 0;
+    font-size: variables.$font-size-small;
+
+}
+
+
+
+
+
+
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: variables.$spacer;
+    margin-top: variables.$spacer-section;
+
+    &__image {
+        grid-column: 1 / 2;
+    }
+
+    &__text {
+        grid-column: 2 / 5;
+
+        & .heading-h2 {
+            margin-bottom: 0;
+        }
+
+        & .article__meta {
+            margin-bottom: variables.$spacer-half;
+        }
+    }
+}
+
