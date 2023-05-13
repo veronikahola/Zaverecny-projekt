@@ -141,7 +141,7 @@
   color: variables.$color-dark;
   display: block;
   padding: variables.$spacer-half;
-  height: 60vh;
+  height: auto;
   overflow: scroll;
 
   &:hover {

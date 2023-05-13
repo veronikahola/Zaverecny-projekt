@@ -1,0 +1,17 @@
+@use "variables";
+
+
+.form-a {
+    display: block;
+    color: white;
+    background-color: variables.$color-first;
+    padding: variables.$spacer-half;
+    margin-top: variables.$spacer-half;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+
+    &:hover {
+        color: variables.$color-second;
+    }
+}
