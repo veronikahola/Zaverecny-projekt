@@ -36,7 +36,18 @@
         &::after {
             content: "";
             display: block;
-            height: 1.5px;
+            height: 1px;
+            left: 50%;
+            position: absolute;
+            background: variables.$color-second;
+            transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            width: 0;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            height: 1px;
             left: 50%;
             position: absolute;
             background: variables.$color-second;
@@ -49,8 +60,13 @@
             left: 15%; 
         }
 
+        &:hover::before {
+            width: 70%; 
+            left: 15%; 
+        }
+
         &:hover {
-            color: variables.$color-first;
+            color: variables.$color-second;
         }
     }
 }

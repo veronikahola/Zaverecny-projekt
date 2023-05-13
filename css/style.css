@@ -244,7 +244,17 @@ h1, h2, h3, h4 {
 .menu__item::after {
   content: "";
   display: block;
-  height: 1.5px;
+  height: 1px;
+  left: 50%;
+  position: absolute;
+  background: #C5BBAC;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.menu__item::before {
+  content: "";
+  display: block;
+  height: 1px;
   left: 50%;
   position: absolute;
   background: #C5BBAC;
@@ -255,8 +265,12 @@ h1, h2, h3, h4 {
   width: 70%;
   left: 15%;
 }
+.menu__item:hover::before {
+  width: 70%;
+  left: 15%;
+}
 .menu__item:hover {
-  color: #5C6F68;
+  color: #C5BBAC;
 }
 
 .menu-flex {
