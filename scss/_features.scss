@@ -4,8 +4,13 @@
     font-family: variables.$font-logo;
     font-size: 60px;
     margin: 0;
-    color: variables.$color-dark;
+    color: white;
     text-decoration: none;
+
+
+    @media screen and (min-width: 768px){
+      color: variables.$color-dark;
+    }
 }
 
 
