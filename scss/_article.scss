@@ -1,14 +1,35 @@
 @use "variables";
 
+
+.article {
+    text-align: center;
+
+    @media screen and (min-width: 768px){
+        text-align: justify;
+    }
+}
+
+
 .article__image {
     width: 100%;
 }
 
 .article__content {
+
     display: flex;
-    gap: variables.$spacer;
-    margin: variables.$spacer 0;
+    flex-direction: column;
+    gap: variables.$spacer-half;
+    margin-top: variables.$spacer-half;
+
+    @media screen and (min-width: 768px){
+        flex-direction: row;
+        margin: variables.$spacer 0;
+        gap: variables.$spacer;
+    }
+    
 }
+
+
 
 .article__perex {
     margin: 0 0 variables.$spacer 0;
@@ -39,25 +60,50 @@
 
 
 .article-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: variables.$spacer;
-    margin-top: variables.$spacer-section;
 
-    &__image {
-        grid-column: 1 / 2;
+    margin-bottom: variables.$spacer;
+
+    &__text {    
+        text-align: center;
     }
 
-    &__text {
-        grid-column: 2 / 5;
 
-        & .heading-h2 {
-            margin-bottom: 0;
+
+    @media screen and (min-width: 768px){
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: variables.$spacer;
+        margin: variables.$spacer 0;
+
+        &__image {
+            grid-column: 1 / 3;
+
+            @media screen and (min-width: 960px){
+                grid-column: 1 / 2;
+            }
         }
 
-        & .article__meta {
-            margin-bottom: variables.$spacer-half;
+        &__text {
+            text-align: justify;
+            grid-column: 3 / 5;
+
+            @media screen and (min-width: 960px){
+                grid-column: 2 / 5;
+            }
+
+
+            & .heading-h2 {
+                margin-bottom: 0;
+            }
+
+            & .article__meta {
+                margin-bottom: variables.$spacer-half;
+            }
         }
+    }
+
+    @media screen and (min-width: 960px){
+        margin: variables.$spacer-section 0;
     }
 }
 

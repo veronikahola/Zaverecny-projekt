@@ -4,8 +4,8 @@
 
 
 .header {
-    height: 40vh;
     margin: 0;
+    height: 60vh;
     background-image: url(/images/background-header.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -13,16 +13,21 @@
     background-size: cover;
     box-shadow: inset 0 0 900px rgba(255, 255, 255, 0.196);
     border-bottom: 10px solid variables.$color-second;
-    // background-image: linear-gradient(to left top, #ffffff, #d5d8dc, #aab4b8, #809192, #5c6f68);
+
+    // @media screen and (min-width: 768px) {
+        
+    // }
+
+    @media screen and (min-width: 960px) {
+        height: 40vh;
+    }
 }
 
-
 .menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding-top: variables.$spacer-half;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     &__item {
         text-transform: uppercase;
@@ -43,7 +48,7 @@
             transition: width 0.3s ease 0s, left 0.3s ease 0s;
             width: 0;
         }
-
+  
         &::before {
             content: "";
             display: block;
@@ -54,25 +59,35 @@
             transition: width 0.3s ease 0s, left 0.3s ease 0s;
             width: 0;
         }
-
+  
         &:hover::after {
             width: 70%; 
             left: 15%; 
         }
-
+  
         &:hover::before {
             width: 70%; 
             left: 15%; 
         }
-
+  
         &:hover {
             color: variables.$color-second;
         }
     }
+
+    @media screen and (min-width: 960px) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
 
 .menu-flex {
-    display: flex;
-}
 
+    @media screen and (min-width: 960px) {
+        display: flex;
+    }
+
+}
+  
 

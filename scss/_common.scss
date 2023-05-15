@@ -6,7 +6,11 @@
 .menu,
 .footer__grid {
     margin: 0 auto;
-    max-width: 1000px;
+    max-width: 860px;
+
+    @media screen and (min-width: 768px){
+        max-width: 960px;
+    }
 }
 
 body {
@@ -20,10 +24,44 @@ body {
 
 
 .section {
-    margin-top: variables.$spacer-section;
+    padding: 0 variables.$spacer-half;
+    margin-top: variables.$spacer;
+
+    @media screen and (min-width: 768px){
+        margin-top: variables.$spacer-section;
+    }
+
+    @media screen and (min-width: 960px){
+        padding: 0;
+    }
+
+    &-intro {
+        @media screen and (min-width: 768px){
+            margin-top: variables.$spacer-section;
+        }
+    }
+
+    &-ofarme {
+        text-align: center;
+        
+        @media screen and (min-width: 768px){
+            text-align: justify;
+        }
+    }
+
+    &:first-child {
+        margin-top: variables.$spacer-half;
+
+        @media screen and (min-width: 768px){
+            margin-top: variables.$spacer-section;
+        }
+    }
+    
 }
 
-
+.no-padding {
+    padding: 0;
+}
 
 
 
@@ -36,18 +74,26 @@ h1, h2, h3, h4 {
 .heading-h1 {
     text-align: center;
     text-transform: uppercase;
-    font-size: 32px;
+    font-size: 24px;
+
+    @media screen and (min-width: 768px){
+        font-size: 32px;
+    }
 }
 
 
 
 .heading-h2 {
     text-transform: uppercase;
-    font-size: 24px;
+    font-size: 18px;
 
     &--glide {
         font-size: 20px;
         margin: variables.$spacer-half 0 0 0;
+    }
+
+    @media screen and (min-width: 768px){
+        font-size: 24px;
     }
 }
 
@@ -77,24 +123,65 @@ h1, h2, h3, h4 {
 
 
 
+
 // obecný flexbox
 .section__column-flex {
     display: flex;
-    gap: variables.$spacer;
+    flex-direction: column;
+    gap: variables.$spacer-half;
     text-align: justify;
+
+    @media screen and (min-width: 768px){
+        flex-direction: row;
+        gap: variables.$spacer;
+    }
     
 
     &--reverse {
-        flex-direction: row-reverse;
-        margin-top: variables.$spacer-section;
+        @media screen and (min-width: 768px){
+            flex-direction: row-reverse;
+            margin-top: variables.$spacer-section;
+        }
     }
 }
 
+
+.section-intro__image {
+    &--hidden {
+        display: none;
+
+        @media screen and (min-width: 768px){
+            display: inline;
+        }
+    }
+
+    &--margin {
+        margin-top: variables.$spacer;
+
+        @media screen and (min-width: 768px){
+            margin: 0;
+        }
+    }
+}
+
+
+
+
 .section__column {
     flex-basis: 50%;
+    text-align: center;
+
+    @media screen and (min-width: 768px){
+        text-align: justify;
+    }
 
     &--basis {
         flex-basis: 30%;
+        text-align: center;
+
+        @media screen and (min-width: 768px){
+            text-align: justify;
+        }
     }
 
     &--form {
@@ -103,6 +190,15 @@ h1, h2, h3, h4 {
     }
 }
 
+
+
+
 .glide__slide img {
     width: 100%;
+}
+
+
+
+.text-justify {
+    text-align: justify;
 }

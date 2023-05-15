@@ -1,12 +1,30 @@
 $font-logo: 'Sacramento', cursive;
 $font-main: 'Ubuntu', sans-serif;
 
-$font-size-small: 12px;
-$font-size-normal: 16px;
 
-$spacer: 40px;
-$spacer-half: 20px;
-$spacer-section: 80px;
+
+$font-size-small: 12px;
+$font-size-normal: 14px;
+
+@media screen and (min-width: 768px){
+    $font-size-normal: 16px;
+}
+
+
+
+
+// $spacer: 20px;
+// $spacer-half: 20px;
+// $spacer-section: 40px;
+
+// @media screen and (min-width: 768px){
+    $spacer: 40px;
+    $spacer-half: 20px;
+    $spacer-section: 80px;
+// }
+
+
+
 
 
 $color-first: #5C6F68;
