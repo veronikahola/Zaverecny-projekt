@@ -298,6 +298,7 @@ h1, h2, h3, h4 {
   -moz-appearance: none;
   background-color: white;
   color: black;
+  text-align: left;
 }
 
 @supports (-webkit-touch-callout: none) {
