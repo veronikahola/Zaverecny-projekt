@@ -296,6 +296,8 @@ h1, h2, h3, h4 {
 .safari {
   -webkit-appearance: none;
   -moz-appearance: none;
+  background-color: white;
+  color: black;
 }
 
 @supports (-webkit-touch-callout: none) {
