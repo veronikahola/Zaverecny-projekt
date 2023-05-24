@@ -300,6 +300,11 @@ input[type=date] {
   min-height: 1.2em;
 }
 
+@supports (-webkit-touch-callout: none) {
+  .button--form {
+    border-radius: 5px;
+  }
+}
 .google-map {
   padding-bottom: 50%;
   position: relative;

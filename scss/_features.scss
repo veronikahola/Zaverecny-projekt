@@ -135,12 +135,21 @@
     
 }
 
+
+// oprava zobrazení data v safari
 input[type="date"]
 {
     display:block;
     -webkit-appearance: textfield;
     -moz-appearance: textfield;
     min-height: 1.2em;
+}
+
+// oprava polí formuláře v safari
+@supports (-webkit-touch-callout: none) {
+  .button--form {
+    border-radius: 5px;
+  }
 }
 
 
