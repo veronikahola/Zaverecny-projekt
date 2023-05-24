@@ -385,12 +385,11 @@ h1, h2, h3, h4 {
     position: relative;
     background-size: cover;
     box-shadow: inset 0 0 900px rgba(255, 255, 255, 0.196);
-    border-bottom: 10px solid #C5BBAC;
   }
 }
 @media screen and (min-width: 960px) {
   .header {
-    height: 40vh;
+    height: 50vh;
   }
 }
 
