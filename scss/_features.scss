@@ -137,13 +137,11 @@
 
 
 // oprava zobrazení data v safari
-input[type="date"]
-{
-    display:block;
-    -webkit-appearance: textfield;
-    -moz-appearance: textfield;
-    min-height: 1.2em;
+.safari {
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
+
 
 // oprava polí formuláře v safari
 @supports (-webkit-touch-callout: none) {
