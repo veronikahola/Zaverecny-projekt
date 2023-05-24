@@ -6,10 +6,12 @@
     margin: 0;
     color: white;
     text-decoration: none;
+    line-height: 1.3;
 
 
     @media screen and (min-width: 768px){
       color: variables.$color-dark;
+      line-height: 2;
     }
 }
 
@@ -45,6 +47,23 @@
 
     &--form {
         background-color: white;
+        width: 100%;
+        @media screen and (min-width: 768px){
+          width: auto;
+        }
+    }
+
+    &--pc {
+      display: none;
+      @media screen and (min-width: 768px){
+        display: inline-block;
+      }
+    }
+
+    &--phone {
+      @media screen and (min-width: 768px){
+        display: none;
+      }
     }
 }
 
@@ -109,11 +128,19 @@
     }
 
     &__input {
-      width: 100%;
       border: 1px solid variables.$color-second;
       padding: 30px 0 10px variables.$spacer-half;
-      font-size: variables.$font-size-small;  
+      font-size: variables.$font-size-small; 
     }
+    
+}
+
+input[type="date"]
+{
+    display:block;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    min-height: 1.2em;
 }
 
 
@@ -158,14 +185,17 @@
   height: auto;
   overflow: scroll;
 
-  &:hover {
-    transition: 0.3s;
-    background-color: variables.$color-second;
-  }
 
-  &:hover .article__image {
-    box-shadow: 43px 43px 0 -40px variables.$color-light;
-    transform: scale(1.05);
+  @media screen and (min-width: 768px){
+    &:hover {
+      transition: 0.3s;
+      background-color: variables.$color-second;
+    }
+
+    &:hover .article__image {
+      box-shadow: 43px 43px 0 -40px variables.$color-light;
+      transform: scale(1.05);
+    }
   }
 
 }
@@ -183,6 +213,15 @@
     background-color: variables.$color-second;
     color: white;
   }
+}
+
+.glide__arrows {
+  display: none;
+
+  @media screen and (min-width: 768px){
+    display: inline;
+  }
+
 }
 
 

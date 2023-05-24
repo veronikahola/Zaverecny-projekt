@@ -124,6 +124,7 @@
 
 
 // stylování hamburgeru
+
 .menu__checkbox {
 	position: absolute;
 	left: -9999px;
@@ -132,7 +133,8 @@
 .menu__toggler {
 	cursor: pointer;
     color: white;
-    font-size: 18px;
+    font-size: 32px;
+    // line-height: 1.2;
 }
 
 .menu__list {
