@@ -336,8 +336,6 @@ h1, h2, h3, h4 {
   color: #031107;
   display: block;
   padding: 20px;
-  height: auto;
-  overflow: scroll;
 }
 @media screen and (min-width: 768px) {
   .glide__card:hover {

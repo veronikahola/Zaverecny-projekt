@@ -192,8 +192,6 @@
   color: variables.$color-dark;
   display: block;
   padding: variables.$spacer-half;
-  height: auto;
-  overflow: scroll;
 
 
   @media screen and (min-width: 768px){
